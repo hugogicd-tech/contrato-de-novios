@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Renovación de Contrato ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuentes Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Confeti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+    <main class="container">
+        
+        <!-- PANTALLA 1: RENOVACIÓN DE CONTRATO -->
+        <section id="screen-contract" class="card active">
+            <div class="heart-icon">📜❤️</div>
+            <h1>Renovación de Contrato</h1>
+            
+            
+            <div class="contract-body">
+                <p>Se hace de su conocimiento que ha transcurrido oficialmente <strong>1 MES</strong> de prueba en el puesto de <i>Novia Oficial</i>.</p>
+                <p>Se solicita su confirmación para renovar contrato por tiempo indefinido con derecho a besos, abrazos y atenciones ilimitadas.</p>
+                <p class="question">¿Aceptas renovar el contrato con tu novio?</p>
+            </div>
+
+            <div class="buttons-container">
+                <button id="btn-yes" class="btn btn-yes">¡SÍ, ACEPTO! 😍</button>
+                <button id="btn-no" class="btn btn-no">No 🙈</button>
+            </div>
+        </section>
+
+        <!-- PANTALLA 2: CARTA Y FOTOS -->
+        <section id="screen-letter" class="card hidden">
+            
+            <div class="badge">¡Contrato Renovado! ✨</div>
+            
+            <!-- GALERÍA POLAROID INTERACTIVA -->
+            <div class="gallery-section">
+            
+                <p class="tap-hint">👇 Toca la foto para pasar a la siguiente</p>
+                
+                <div class="polaroid-stack" id="polaroid-stack">
+                    
+                    <div class="polaroid" data-index="4">
+                        <div class="tape"></div>
+                        <img src="foto4.jpg" alt="Momento 4">
+                       
+                    </div>
+                    <div class="polaroid" data-index="3">
+                        <div class="tape"></div>
+                        <img src="foto3.jpg" alt="Momento 3">
+                       
+                    </div>
+                    <div class="polaroid" data-index="2">
+                        <div class="tape"></div>
+                        <img src="foto2.jpg" alt="Momento 2">
+                        
+                    </div>
+                    <div class="polaroid" data-index="1">
+                        <div class="tape"></div>
+                        <img src="foto1.jpg" alt="Momento 1">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARTA PERSONALIZADA -->
+            <div class="letter-container">
+                <div class="letter-header">
+                    <span class="envelope-icon">💌</span>
+                    <h2>Para mi sonia</h2>
+                </div>
+
+                <div class="letter-body">
+                    <p>Dicen que un mes es poco tiempo, pero contigo el tiempo ha tomado un sentido completamente distinto. A veces parece que fue ayer cuando empezamos esto y, otras, siento como si nos conociéramos de toda la vida.</p>
+                    
+                    <p>Sabes bien que yo no soy de ponerme romántico, y escribir estas cosas. Pero si con alguien vale la pena esforzarse y decir lo que siento, es contigo. Contigo es diferente. Gracias por tener esa chispa de sacar mi lado más cariñoso, ese que ni yo mismo sabía que existía.</p>
+                    
+                    <p>Este primer mes ha sido un poquillo difícil. Hemos tenido días de risas hasta que nos doliera la boca y también algún que otro día más malo en el que hemos chocado. Pero me quedo con lo más importante de todo esto, que da igual la tontería por la que discutamos o los problemas que tengamos, que al final del día <strong>siempre volvemos a ser tú y yo</strong>. Me encanta que sepamos mirarnos, hablar las cosas y arreglarlo todo antes de irnos a dormir.</p>
+                    
+                    <p>Sinceramente, no imaginaba que te volverías tan importante en mi vida en tan poco tiempo. Te has metido en mi día a día casi sin darme cuenta, y ahora mismo no me imagino mis días sin tus palabras, tus abrazos o tus miradas.</p>
+                    
+                    <p>No quiero obsesionarme con el mañana ni hacer promesas vacías. Lo único que me importa es el ahora: quiero ser feliz a tu lado, exprimir cada segundo juntos y disfrutar del camino sin prisas. Que esto dure lo que tenga que durar, pero si de mí depende, ojalá dure toda la vida.</p>
+                    
+                    <p class="final-love">Te quiero un montón, pequeña!! Feliz primer mes juntos 💘💘💘💘</p>
+                </div>
+            </div>
+
+            <button class="btn-hearts" onclick="lluviaCorazones()">¡Te Amo! ❤️</button>
+        </section>
+
+    </main>
+    <!-- MODAL ANIMACIÓN "TE AMO" -->
+    <div id="love-modal" class="love-overlay" onclick="cerrarLoveModal()">
+        <div class="love-modal-content">
+            <div class="floating-hearts-bg" id="floating-hearts-container"></div>
+            
+            <div class="big-animated-heart">💖</div>
+            <h2 class="love-title">¡TE QUIERO MUCHÍSIMO!</h2>
+            <p class="love-subtitle">Gracias por este mes tan especial a tu lado, mi pequeña ✨</p>
+            
+    
+            
+            <p class="close-hint">(Toca la pantalla para cerrar)</p>
+        </div>
+    </div>
+
+    <!-- MODAL PARA VER FOTO EN GRANDE -->
+    <div id="modal" class="modal" onclick="cerrarModal()">
+        <img id="modal-img" src="" alt="Foto en grande">
+        <p id="modal-caption"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
